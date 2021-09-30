@@ -7,13 +7,18 @@ jobs:
   test:
     runs-on: [ubuntu-latest]
     steps:
-      - uses: actions/checkout@v2
-
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js 14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: NPM
+        run: npm install
       - name: jest test with results file
         continue-on-error: false
         working-directory: '__tests__'
-        run: jest --json --outputFile=jest.json
-      
+        run: npm run test:pr
       - name: Process jest results
         id: process-jest
         uses: im-open/process-jest-test-results@v1.0.1
@@ -46,6 +51,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
+      - name: NPM
+        run: npm install
       - name: Build
         run: npm run build
       - name: Format
