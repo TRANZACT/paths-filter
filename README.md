@@ -144,11 +144,11 @@ don't allow this because they don't work on a level of individual jobs or steps.
 - package.json
   - [✔] Update the `name` with the new action value
 - src/main.js
-  - [ ] Implement your custom javascript action
+  - [✔] Implement your custom javascript action
 - action.yml
   - [✔] Fill in the correct name, description, inputs and outputs
 - .prettierrc.json
-  - [ ] Update any preferences you might have
+  - [✔] Update any preferences you might have
 - CODEOWNERS
   - [✔] Update as appropriate
 - Repository Settings
