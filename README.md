@@ -152,17 +152,17 @@ don't allow this because they don't work on a level of individual jobs or steps.
 - CODEOWNERS
   - [✔] Update as appropriate
 - Repository Settings
-  - [ ] On the *Options* tab check the box to *Automatically delete head branches*
+  - [✔] On the *Options* tab check the box to *Automatically delete head branches*
   - [ ] On the *Options* tab update the repository's visibility (must be done by an org owner)
-  - [ ] On the *Branches* tab add a branch protection rule
-    - [ ] Check *Require pull request reviews before merging*
-    - [ ] Check *Dismiss stale pull request approvals when new commits are pushed*
-    - [ ] Check *Require review from Code Owners*
-    - [ ] Check *Include Administrators*
-  - [ ] On the *Manage Access* tab add the appropriate groups
+  - [✔] On the *Branches* tab add a branch protection rule
+    - [✔] Check *Require pull request reviews before merging*
+    - [✔] Check *Dismiss stale pull request approvals when new commits are pushed*
+    - [✔] Check *Require review from Code Owners*
+    - [✔] Check *Include Administrators*
+  - [✔] On the *Manage Access* tab add the appropriate groups
 - About Section (accessed on the main page of the repo, click the gear icon to edit)
-  - [ ] The repo should have a short description of what it is for
-  - [ ] Add one of the following topic tags:
+  - [✔] The repo should have a short description of what it is for
+  - [✔] Add one of the following topic tags:
     | Topic Tag       | Usage                                    |
     | --------------- | ---------------------------------------- |
     | az              | For actions related to Azure             |
@@ -178,8 +178,8 @@ don't allow this because they don't work on a level of individual jobs or steps.
     | pagerduty       | For actions related to PagerDuty         |
     | test            | For actions related to testing           |
     | tf              | For actions related to Terraform         |
-  - [ ] Add any additional topics for an action if they apply    
-  - [ ] The Packages and Environments boxes can be unchecked
+  - [✔] Add any additional topics for an action if they apply    
+  - [✔] The Packages and Environments boxes can be unchecked
     
 
 ## Recompiling
