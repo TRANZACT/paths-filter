@@ -25,3 +25,30 @@ jobs:
       - name: Check for unstaged changes
         if: runner.os != 'windows'
         run: ./check-for-unstaged-changes.sh
+  test:
+    runs-on: [ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: jest test with results file
+        continue-on-error: true
+        working-directory: '__tests__' 
+        run: jest --json --outputFile=../../jest.json
+      
+      - name: Process jest results
+        id: process-jest
+        uses: im-open/process-jest-test-results@v1.0.1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          results-file: 'jest.json'
+          report-name: 'Jest Results'
+          create-status-check: true
+          create-pr-comment: false
+          ignore-test-failures: true
+          timezone: 'america/new_york'
+
+      - name: Fail if there were errors in the jest tests
+        if: steps.process-jest.outputs.test-outcome == 'Failed'
+        run: |
+          echo "There were test failures."
+          exit 1

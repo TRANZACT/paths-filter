@@ -187,15 +187,9 @@ don't allow this because they don't work on a level of individual jobs or steps.
 If changes are made to the action's code in this repository, or its dependencies, you will need to re-compile the action.
 
 ```sh
-# Installs dependencies and bundles the code
-npm run build
-
-# Bundle the code (if dependencies are already installed)
-npm run bundle
+# Installs dependencies, tests and packs the code
+npm run all
 ```
-
-These commands utilize [esbuild](https://esbuild.github.io/getting-started/#bundling-for-node) to bundle the action and
-its dependencies into a single file located in the `dist` folder.
 
 ## Code of Conduct
 
