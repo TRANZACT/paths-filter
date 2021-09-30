@@ -138,31 +138,31 @@ don't allow this because they don't work on a level of individual jobs or steps.
 
 ## TODOs
 - Readme
-  - [✔] Update the Inputs section with the correct action inputs
-  - [✔] Update the Outputs section with the correct action outputs
-  - [✔] Update the Usage Example section with the correct usage   
+  - [x] Update the Inputs section with the correct action inputs
+  - [x] Update the Outputs section with the correct action outputs
+  - [x] Update the Usage Example section with the correct usage   
 - package.json
-  - [✔] Update the `name` with the new action value
+  - [x] Update the `name` with the new action value
 - src/main.js
-  - [✔] Implement your custom javascript action
+  - [x] Implement your custom javascript action
 - action.yml
-  - [✔] Fill in the correct name, description, inputs and outputs
+  - [x] Fill in the correct name, description, inputs and outputs
 - .prettierrc.json
-  - [✔] Update any preferences you might have
+  - [x] Update any preferences you might have
 - CODEOWNERS
-  - [✔] Update as appropriate
+  - [x] Update as appropriate
 - Repository Settings
-  - [✔] On the *Options* tab check the box to *Automatically delete head branches*
+  - [x] On the *Options* tab check the box to *Automatically delete head branches*
   - [ ] On the *Options* tab update the repository's visibility (must be done by an org owner)
-  - [✔] On the *Branches* tab add a branch protection rule
-    - [✔] Check *Require pull request reviews before merging*
-    - [✔] Check *Dismiss stale pull request approvals when new commits are pushed*
-    - [✔] Check *Require review from Code Owners*
-    - [✔] Check *Include Administrators*
-  - [✔] On the *Manage Access* tab add the appropriate groups
+  - [x] On the *Branches* tab add a branch protection rule
+    - [x] Check *Require pull request reviews before merging*
+    - [x] Check *Dismiss stale pull request approvals when new commits are pushed*
+    - [x] Check *Require review from Code Owners*
+    - [x] Check *Include Administrators*
+  - [x] On the *Manage Access* tab add the appropriate groups
 - About Section (accessed on the main page of the repo, click the gear icon to edit)
-  - [✔] The repo should have a short description of what it is for
-  - [✔] Add one of the following topic tags:
+  - [x] The repo should have a short description of what it is for
+  - [x] Add one of the following topic tags:
     | Topic Tag       | Usage                                    |
     | --------------- | ---------------------------------------- |
     | az              | For actions related to Azure             |
@@ -178,8 +178,8 @@ don't allow this because they don't work on a level of individual jobs or steps.
     | pagerduty       | For actions related to PagerDuty         |
     | test            | For actions related to testing           |
     | tf              | For actions related to Terraform         |
-  - [✔] Add any additional topics for an action if they apply    
-  - [✔] The Packages and Environments boxes can be unchecked
+  - [x] Add any additional topics for an action if they apply    
+  - [x] The Packages and Environments boxes can be unchecked
     
 
 ## Recompiling
@@ -197,4 +197,4 @@ This project has adopted the [im-open's Code of Conduct](https://github.com/im-o
 
 ## License
 
-Copyright &copy; 2021, Extend Health, LLC. Code released under the [MIT license](LICENSE).
+Copyright &copy; 2021, TRANZACT. Code released under the [MIT license](LICENSE).
