@@ -4,7 +4,40 @@ on:
     paths-ignore:
       - '**.md'
 jobs:
+  test:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js 14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: NPM
+        run: npm install
+      - name: jest test with results file
+        continue-on-error: false
+        working-directory: '__tests__'
+        run: npm run test:pr
+      - name: Process jest results
+        id: process-jest
+        uses: im-open/process-jest-test-results@v1.0.1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          results-file: 'jest.json'
+          report-name: 'Jest Results'
+          create-status-check: true
+          create-pr-comment: true
+          ignore-test-failures: false
+          timezone: 'america/new_york'
+
+      - name: Fail if there were errors in the jest tests
+        if: steps.process-jest.outputs.test-outcome == 'Failed'
+        run: |
+          echo "There were test failures."
+          exit 1
   build:
+    needs: test
     runs-on: ${{ matrix.operating-system }}
     strategy:
       fail-fast: false
@@ -18,6 +51,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
+      - name: NPM
+        run: npm install
       - name: Build
         run: npm run build
       - name: Format
